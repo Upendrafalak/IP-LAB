@@ -10,16 +10,17 @@
   </head>
   <body>
     <section>
-      <p>ORDER DETAILS</p>
+      <figure></figure>
       <img
       src="https://res.cloudinary.com/drr7rbizq/image/upload/v1659498631/IPLab/download_jqevgw.jpg"
       alt="t-shirt img"
       width="250"
-  />
+  > </figure>
       <form>
+        <p><strong>ORDER DETAILS</strong></p><fieldset>
         <div>
           <label for="text-tshirt">Enter text to print on the t-shirt</label>
-          <input type="text" id="text-tshirt" />
+          <input type="text" id="text-tshirt" required/>
         </div>
         <p>Choose Color</p>
         <div>
@@ -27,7 +28,7 @@
             checked
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault1"
+            id="flexRadioDefault1" required
           />
           <label for="flexRadioDefault1"> Black </label>
         </div>
@@ -56,14 +57,14 @@
         </select>
         <br />
         <p>Choose quantity</p>
-        <div>
+        <div >
           <input
             type="range"
             id="volume"
             name="volume"
             value="1"
             min="1"
-            max="5"
+            max="5" required
           />
           <label for="volume">Volume</label>
         </div>
@@ -73,7 +74,7 @@
             Add additional details
 </textarea
           >
-        </article>
+        </article></fieldset>
         <section>
           <label for="date">Select Delivery Date:</label>
 
@@ -87,14 +88,15 @@
           />
         </section>
         <br />
-        <p>Total: $35.99</p>
+        <p>Total: $35.99</p><p><strong> PAYMENT DETAILS</strong> </p><fieldset>
+          
         <b><p>Choose Payment Method</p></b>
         <div>
           <input
             checked
             type="radio"
             name="flexRadioDefault2"
-            id="flexRadioDefault5"
+            id="flexRadioDefault5" required
           />
           <label for="flexRadioDefault5"> Credit/Debit Card </label>
         </div>
@@ -109,16 +111,17 @@
         <div>
           <input type="radio" name="flexRadioDefault2" id="flexRadioDefault7" />
           <label for="flexRadioDefault7"> Pay on delivery </label>
-        </div>
+        </div></fieldset>
         <section>
             <br>
+            <p><strong>PERSONAL DETAILS</strong></p><fieldset>
           <b>Enter Your Details Here:-</b><br /><br />
           <label for="fname">First name:-</label><br /><br />
           <input
             type="text"
             id="fname"
             name="fname"
-            placeholder="Enter Your first name here"
+            placeholder="Enter Your first name here" required
           /><br /><br />
 
           <label for="lname">Last Name</label><br /><br />
@@ -131,12 +134,12 @@
 
           <label for="address">Address</label><br /><br />
           <textarea
-            name="address"
+            name="address
             id="address"
             cols="20"
             rows="3"
             maxlength="200"
-            placeholder="Enter Your address here"
+            placeholder="Enter Your address here" required
           ></textarea
           ><br /><br />
 
@@ -146,7 +149,7 @@
             name="Contact"
             id="Contact"
             maxlength="10"
-            placeholder="Enter Your contact no. here"
+            placeholder="Enter Your contact no. here" required
           /><br /><br />
 
           <label for="email">Email:-</label><br /><br />
@@ -155,16 +158,14 @@
             name="email"
             id="email"
             placeholder="Enter your Email Here"
-          /><br /><br />
+          /><br /><br /></fieldset>
         </section>
-
-        <button type="button">Place Order</button>
+<center>
+        <button type="button">Place Order</button></center>
       </form>
     </section>
+    
+    
   </body>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-  ></script>
+  
 </html>
