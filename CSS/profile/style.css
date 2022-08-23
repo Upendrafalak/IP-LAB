@@ -1,0 +1,78 @@
+body {
+    background-image: linear-gradient(to bottom, #B1E1FF , #E7F6F2);
+    text-align:center;
+}
+/* #236299 */
+.photo{
+        position: relative;
+        left: 1px;
+        top:30px;
+        border-radius: 50%;
+        display: grid;
+     
+}
+ 
+
+.header{
+    position :
+}
+ 
+#bio {
+    position: relative;
+    left: 350px;
+    top:200px;
+ 
+}
+ 
+#info{
+    position: relative;
+    right: 950px;
+    top:-160px;
+}
+ /* .contact{
+    position: relative;
+    right: 100px;
+    top: 300px;
+ } */
+.table {
+    width: 50%;
+    border: 2px;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+   
+  }
+
+.insta {
+    width: 35px;
+    height: 35px;
+}
+.facebook {
+    width: 35px;
+    height: 35px;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+.git {
+    width: 35px;
+    height: 35px;
+    margin-right: 3em;
+}
+
+.linkedin {
+    width: 35px;
+    height: 35px;
+}
+
+.inner-text {
+    text-align: center;
+    display: inline-block;
+}
+
+.text{
+    text-align: center;
+}
+ul {
+    display: inline-block;
+    text-align: left;
+}
