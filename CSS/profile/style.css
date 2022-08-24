@@ -1,47 +1,93 @@
 body {
     background-image: linear-gradient(to bottom, #B1E1FF , #E7F6F2);
-    text-align:center;
+    /* text-align:center; */
 }
-/* #236299 */
-.photo{
-        position: relative;
-        left: 1px;
-        top:30px;
-        border-radius: 50%;
-        display: grid;
-     
+.profile {
+    margin-left: 45%;
 }
- 
+.profile img {
+    width: 120px;
+    height: 120px;
+}
 
-.header{
-    position :
+body {
+    background-color: black;
 }
- 
-#bio {
-    position: relative;
-    left: 350px;
-    top:200px;
- 
+
+.profile header {
+    color: whiteblack;
+    font-family: "Roboto", sans-serif;
 }
- 
-#info{
-    position: relative;
-    right: 950px;
-    top:-160px;
+
+.profile div {
+    color: #black;
+    font-size: small;
 }
- /* .contact{
-    position: relative;
-    right: 100px;
-    top: 300px;
- } */
-.table {
-    width: 50%;
-    border: 2px;
-    border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-   
-  }
+
+p::first-letter {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icons svg {
+    transition: all 0.25s;
+    margin-left: 17%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.icons svg:hover {
+    transform: scale(1.5, 1.5);
+}
+
+.text {
+    margin-left: 1%;
+    color: black;
+}
+
+.inner-text {
+    color: #black;
+}
+
+.inner-text > li::first-letter {
+    font-weight: 700;
+    font-size: larger;
+    color: black;
+}
+
+.video {
+    margin-top: 5%;
+    margin-left: 12.5%;
+}
+
+.audio {
+    color: #black;
+    margin-left: 35%;
+    margin-bottom: 4%;
+}
+
+.text::first-line {
+    font-size: large;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+header::first-line {
+    text-transform: uppercase;
+}
+
+li::marker {
+    content: "> ";
+    font-size: 1.2em;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .insta {
     width: 35px;
@@ -64,15 +110,6 @@ body {
     height: 35px;
 }
 
-.inner-text {
-    text-align: center;
-    display: inline-block;
-}
-
-.text{
-    text-align: center;
-}
-ul {
-    display: inline-block;
-    text-align: left;
+.anchor-buttons{
+    margin-left: 600px;
 }
