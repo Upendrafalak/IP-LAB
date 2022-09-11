@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Let's customise!</title>
+    <title>Let's Order!</title>
+    <script src="https://kit.fontawesome.com/f635a28c1e.js" crossorigin="anonymous"></script>
     <link rel="icon" href="https://res.cloudinary.com/drr7rbizq/image/upload/v1659498388/IPLab/favicon_oyqloi.ico">
 
 </head>
@@ -54,7 +55,7 @@
     }
 
     .preview {
-        flex:1;
+        flex: 1;
         flex-direction: column;
         margin-right: 200px;
         align-items: right;
@@ -74,7 +75,7 @@
 
     .form {
         margin-right: 25vw;
-        flex:1;
+        flex: 1;
     }
 
     .chooseColour {
@@ -90,11 +91,12 @@
 
 <body style="padding-top:6vh;background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(65, 88, 102));">
     <h3 style="font-size: 3rem; text-align: center; padding-bottom: 5vh;">Order Details</h3>
-    <form action="" enctype="multipart/form-data" method="put">
+    <form action="" enctype="multipart/form-data" method="put" name="myForm" id="shirt_cart"
+        onsubmit="return Validation()">
         <div class="cart">
             <div class="form">
                 <label for="tagline"><b>Enter Tagline:</b></label>
-                <input type="text" name="tagline" id="tagline"
+                <input required type="text" name="tagline" id="tagline"
                     style="width: 50%; box-sizing: border-box; box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2); padding: 12px 20px;"><br>
                 <div class="chooseColour">
                     <label for="color"><b>Choose Color:</b></label>
@@ -120,7 +122,7 @@
                     </div>
                 </div>
                 <label for="size"><b>Select Size:</b></label><br>
-                <select id="size" name="size">
+                <select required id="size" name="size">
                     <option value="25">XS</option>
                     <option value="30">S</option>
                     <option value="35">M</option>
@@ -129,28 +131,36 @@
                     <option value="40">XXL</option>
                 </select><br>
                 <label for="quantity"><b>Quantity: </b></label><br>
-                <select id="quantity" name="quantity">
+                <select required id="quantity" name="quantity">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                 </select>
                 <div>
+                    <label for="date"><strong>Select Delivery Date:</strong></label>
+                    <input type="date" id="date" name="date" value="11-09-2022" min="15-09-2022" max="31-10-2022"
+                        required /><br>
                     <label for="price"><b>Total Order Price:</b> <strong>Rs.599</strong></label><br><br>
                     <label for="tagline"><b>Enter Your Name:</b></label>
-                    <input type="text" name="tagline" id="tagline"
+                    <input required type="text" name="tagline" id="tagline"
                         style="width: 50%; box-sizing: border-box; box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2); padding: 12px 20px;"><br>
                     <label for="payment_options"><b>Payment Options:</b></label><br>
                     <input type="radio" id="cc" name="payment" value="Credit/Debit Card">
                     <label for="cc">Credit/Debit Card</label><br>
-                    <input type="radio" id="upi" name="color" value="UPI">
+                    <input type="radio" id="upi" name="payment" value="UPI">
                     <label for="upi">UPI</label><br>
-                    <input type="radio" id="crypto" name="color" value="Crypto">
-                    <label for="crypto">Cash on Delivery</label>
+                    <input type="radio" id="crypto" name="payment" value="Crypto">
+                    <label for="crypto" name="payment">Cash on Delivery</label><br><br>
+                    <label for="Contact"><strong>Contact No :</strong></label>
+                    <input type="tel" name="Contact" id="Contact" maxlength="10" required
+                        placeholder="Please enter your Contact no."
+                        style="width: 50%; box-sizing: border-box; box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2); padding: 12px 20px;" />
                 </div>
+                <br /><br />
                 <div style="margin-top: 5px;">
                     <label for="address"><b>Delivery Address:</b></label><br>
-                    <input type="text" id="address"
+                    <input required type="text" id="address"
                         style="width: 50%; box-sizing: border-box; box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2); padding: 12px 20px;"><br>
                     <button type="submit">Place Order</button>
                 </div>
@@ -177,5 +187,40 @@
 
     </div>
 </body>
+<script>
+    function Validation() {
+        const values = [
+            document.forms["myForm"]["tagline"].value,
+            document.forms["myForm"]["size"].value,
+            document.forms["myForm"]["quantity"].value,
+            document.forms["myForm"]["address"].value,
+            document.forms["myForm"]["payment"].value,
+            document.forms["myForm"]["color"].value,
+            document.forms["myForm"]["date"].value,
+            document.forms["myForm"]["Contact"].value,
+
+        ];
+
+
+
+        const receipt_formatted = `Your order is successfully placed!
+Receipt Details:
+Date: ${new Date().toLocaleDateString("UK")}
+Tagline: ${values[0]}
+Size: ${values[1]}
+Quantity: ${values[2]}
+Address: ${values[3]}
+Payment: ${values[4]}
+Color: ${values[5]}
+Date: ${values[6]}
+Contact: ${values[7]}`;
+        alert(receipt_formatted);
+    }
+    const form = document.getElementById("shirt_cart");
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+    });
+
+</script>
 
 </html>
