@@ -44,15 +44,15 @@ initial-scale=1.0"
         const student = new Student("Upendra Falak", "D15A", 15, "VESIT");
         console.log("Student: ", student);
 
-        // Generating an Exception
+
         const checkError = () => {
-            const value = document.getElementById("error_checking").value;
-            console.log(value);
-            if (!value || value === "0") {
-                throw new Error("Invalid Input ");
-            } else {
-                console.log("Valid");
-            }
-        };
+      const value = document.getElementById("error_checking").value;
+      console.log(value);
+      if (value > 0) {
+        console.log("Valid Roll number");
+      } else {
+        throw new Error("Invalid roll number");
+      }
+    };
     </script>
 </html>
