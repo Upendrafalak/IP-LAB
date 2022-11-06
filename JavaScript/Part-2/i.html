@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class Person {
+        constructor(name, class_name, roll) {
+            this.name = name;
+            this.class_name = class_name;
+            this.roll = roll;
+        }
+    }
+
+    const person1 = {
+        name :"Upendra",
+        class_name :"D15A",
+        roll :"15"
+    }
+    console.log("Person is :",person1);
+
+    const person2 = new Person("divisha", "d15a" , "16");
+    console.log("person2 :",person2);
+
+    let intro = (class_name) => {
+        console.log("class is : " +class_name);
+    }
+
+</script>
+</body>
+</html>
